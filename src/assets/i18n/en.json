@@ -1,0 +1,28 @@
+{
+    "header":
+    {
+        "title":"COMPANY LOGO",
+        "signout":"SIGN OUT",
+        "settings":"SETTINGS",
+        "english":"English",
+        "french":"French",
+        "about":"About"
+       
+    },
+    "login-inputs":
+    {
+        "username":"username",
+        "password":"password",
+        "select-Languages":"select language",
+        "signin-button":"SignIn"
+    },
+    "HOME":
+    {
+        "HELLO": "hello world"
+    },
+    "car-parts":
+    {
+        "addgroup":"Add Group",
+        "addpart":"Add Part"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "header":
+    {
+        "title":"logo d'entreprise",
+        "signout":"SE DÉCONNECTER",
+        "settings":"LES PARAMÈTRES",
+        "english":"anglaise",
+        "french":"française",
+        "about":"À propos"
+       
+    },
+    "login-inputs":
+    {
+        "username":"Nom d'utilisateur",
+        "password":"le mot de passe",
+        "select-Languages":"Choisir la langue",
+        "signin-button":"s'identifier"
+    },
+    "HOME":
+    {
+        "HELLO": "Bonjour le monde"
+    },
+    "car-parts":
+    {
+        "addgroup":"Ajouter un groupe",
+        "addpart":"Ajouter une pièce"
+    }
+}

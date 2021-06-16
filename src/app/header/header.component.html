@@ -1,0 +1,40 @@
+
+<header class="header-section">
+    <h2><span class="icon-field"><i  class="fas fa-car"></i></span> <span>{{ 'header.title' | translate }}</span> </h2>
+    <div class="side-nav" *ngIf=" usersLoggedIn">
+      <i (click)="toggleSideBar()" style ="cursor: pointer;" class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div class="cart-bar" *ngIf=" usersLoggedIn">
+      <i (click) = "backtoHomePage()" style="margin-left: 40px;cursor: pointer;" class="fas fa-list"></i>
+      <i (click) = "addedItems()" style="margin-left: 40px;cursor: pointer;" class="fas fa-shopping-cart">
+        </i><span class="addedItemsCounter">{{cartItemCounter}}</span>
+    </div>
+    
+  </header>
+
+  
+    <!-- <p>Kevin Smith</p>
+     <a>SIGNOUT</a>
+     <hr>
+    <h2>SETTINGS</h2>
+    <ul>
+      <li>India</li>
+      <li>English (united States)</li>
+      <li>England</li>
+      <li>Francis</li>
+      <li>Japan</li>
+    </ul>
+    <hr>
+    <p>ABOUT</P>
+   -->
+   <div class ="side-nav-content" *ngIf="sideBarBoolean">
+     <p> <i class="fa fa-user" aria-hidden="true"></i> {{userLoggedInName}}</p>
+     <button (click)="loggingOut()">{{ 'header.signout' | translate }}</button>
+     <hr>
+     <h4><i class="fa fa-cog" aria-hidden="true"></i> {{ 'header.settings' | translate }}</h4>
+     <p-dropdown [options]="lang" (onChange)="selectedlang($event)" optionLabel="name" optionValue="code"></p-dropdown>
+    <hr>
+    <h4><i class="fa fa-info-circle" aria-hidden="true"></i> {{ 'header.about' | translate }}</h4>
+   </div>
+  
+  

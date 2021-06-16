@@ -1,0 +1,34 @@
+
+/*table{
+    margin-top: 10px;
+    border-collapse: collapse;
+    width:100%;
+    
+    tr{
+        text-align: center;
+        font-size: medium;
+        border-collapse: collapse;
+     border:2px solid black;
+    }
+    td{
+        text-align: left;
+        font-size: medium;
+        border-collapse: collapse;
+     border:2px solid black;
+    }
+
+}
+th:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}*/
+.main-content{
+    position: relative;
+}
+.button-fields-content{
+    text-align: right;
+    position:absolute;
+    right:0px;
+    top: 20px;  
+}

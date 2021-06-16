@@ -1,0 +1,43 @@
+<!-- <p>confirmation works!</p> -->
+<h2 style="color: #495057;margin-left: 16px;">Orders Placed</h2>
+
+<p-table [value]="confimationCart">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let carPartsInfo of partsDescriber">{{ carPartsInfo}}</th>
+        </tr>
+        <!-- <tr>
+           
+            <th *ngFor="let col of columns">
+                {{col}}
+            </th>
+        </tr> -->
+    </ng-template>
+    <ng-template pTemplate="body" let-confimationCart>
+        <tr>
+
+            <td>
+                {{confimationCart.MFR}}
+            </td>
+            <td>
+                {{confimationCart.PARTNUMBER}}
+
+            </td>
+            <td>
+                {{confimationCart.DESCRIPTION}}
+            </td>
+            <td>
+                {{confimationCart.COST | currency}}
+            </td>
+            <td>
+                {{confimationCart.ORDER}}
+            </td>
+            <td>
+                {{confimationCart.AVAILIABILITY}}
+            </td>
+
+        </tr>
+    </ng-template>
+</p-table>
+<p class="total-content"><b>ORDER TOTAL </b><b>{{total | currency}}</b></p>
+<p-button class="back-to-home-btn" (click)="backToHomePage()">BACK TO HOME</p-button>

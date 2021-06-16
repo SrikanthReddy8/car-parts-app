@@ -1,0 +1,100 @@
+<div class="form-content">
+
+    <form>
+        <label>
+            <span>PO Number:</span>
+            <input type="text" pInputText />
+
+        </label>
+        <br><br>
+        <label>
+            <span>Order Number:</span>
+            <select>
+                <option>Regular</option>
+                <option>Normal</option>
+            </select>
+
+        </label>
+        <br><br>
+        <label>
+            <span style="position: relative;top: -68px;">Note to Store:</span>
+            <textarea pInputTextarea></textarea>
+
+        </label>
+
+        <div class="internal-note">
+            <label>
+                <span>Internal Note:</span>
+                <textarea pInputTextarea></textarea>
+
+            </label>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+  
+    
+
+<div *ngIf="cart.length > 0">
+    
+    
+    
+    <p-table [value]="cart">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th>
+                    <input type="checkbox" [checked]="isAllCheckBoxChecked()" (change)="checkAllCheckBox($event)">
+                </th>
+
+                <th *ngFor="let carPartsInfo of partsDescriber">
+                    {{ carPartsInfo}}
+                </th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cart>
+            <tr>
+                <td>
+                    <input type="checkbox" [(ngModel)]="cart.checked" name="{{cart.id}}" [value]="cart.id" (change)="getItemChecked($event,cart.id)">
+                </td>
+                <td>
+                    {{cart.MFR}}
+                </td>
+                <td>
+                    {{cart.PARTNUMBER}}
+
+                </td>
+                <td>
+                    {{cart.DESCRIPTION}}
+                </td>
+                <td>
+                    {{cart.COST}}
+                </td>
+                <td>
+                    {{cart.ORDER}}
+                </td>
+                <td>
+                    {{cart.AVAILIABILITY}}
+                </td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+    <p-button (click)="confirmationPage()">PLACE ORDER</p-button>
+
+</div>
+<div *ngIf="checkedPassMessage">
+    <h1>
+        please add some elements to cart
+    </h1>
+</div>
+<p-button class="addcart-delete-btn" (click)="deletingItems()">
+    <i class="far fa-trash-alt"></i>
+    DELETE
+</p-button>
+
+

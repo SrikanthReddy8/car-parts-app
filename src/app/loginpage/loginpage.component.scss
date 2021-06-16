@@ -1,0 +1,48 @@
+.login-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+}
+
+input[type=text] {
+    width: auto;
+    padding: 8px 85px 8px 10px;
+    margin: 9px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+select{
+    width: auto;
+    padding: 8px 108px 9px 21px;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+  input[type=password] {
+    width: auto;
+    padding: 8px 85px 8px 10px;
+    margin: -16px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+  }
+  
+  .button-field {
+    background-color: orange;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-left: 90px;
+    font-size: 11px;
+    border: none;
+  }
+  .select-field-icon{
+    position: absolute;
+    top: 8px;
+    left: 6px;
+  }
+  

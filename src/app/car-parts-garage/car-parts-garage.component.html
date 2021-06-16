@@ -1,0 +1,160 @@
+<div class="main-content">
+    <div class="button-fields-content">
+
+        <p-button class="button-modifes" (click)="showDialogAddGroupopUp()">
+            <i class="fas fa-plus-circle"></i> 
+            {{ 'car-parts.addgroup' | translate }}
+        </p-button>
+
+        <p-button class="button-modifes" (click)="showDialogAddPartPopUp()">
+            <i class="fas fa-plus-circle"></i> {{ 'car-parts.addpart' | translate }}
+        </p-button>
+
+
+    </div>
+    <div>
+        <p-tabView  [(activeIndex)]="activeTabIndex">
+           
+
+
+            <p-tabPanel [header]="tabs" *ngFor="let tabs of tabViewArray"  >
+
+                <div>
+                    <p-table [value]="carMaterialInfo" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10]"
+                        [totalRecords]="totalRecords" pageLinkSize="3">
+                        <ng-template pTemplate="header" let-columns>
+
+                            <tr>
+                                <th *ngFor="let carPartsInfo of partsDescriber">{{ carPartsInfo}}</th>
+                            </tr>
+
+                        </ng-template>
+                        <ng-template pTemplate="body" let-carMaterialInfo>
+
+                            <tr>
+
+                                <td>{{carMaterialInfo.MFR}}</td>
+                                <td style="cursor: pointer" (click)="partsInfo(carMaterialInfo)">
+                                    {{carMaterialInfo.PARTNUMBER}}</td>
+                                <td>{{carMaterialInfo.DESCRIPTION}}</td>
+                                <td>{{carMaterialInfo.COST | currency}}</td>
+                                <td>
+                                    <i (click)="increment(carMaterialInfo)" class="fa fa-plus" aria-hidden="true"></i>
+                                    <input class="input-fields-content" [(ngModel)]="carMaterialInfo.ORDER">
+                                    <i (click)="decrement(carMaterialInfo)" class="fa fa-minus" aria-hidden="true"></i>
+                                </td>
+                                <td>
+                                    <select (change)="selectedoptions(carMaterialInfo,$event)">
+                                        <option *ngFor="let item of availabilityArr">
+                                            {{item}}
+                                        </option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <i style="cursor: pointer;position:relative"
+                                        (click)="onActionIconClick($event,carMaterialInfo)" class="fa fa-ellipsis-v"
+                                        aria-hidden="true"></i>
+                                    <p-menu #menu [popup]="true" [model]="items"></p-menu>
+                                </td>
+
+                            </tr>
+
+
+                        </ng-template>
+                    </p-table>
+                    <p-table [value]="[{}]">
+                        <ng-template pTemplate="body">
+                            <tr>
+                                <td colspan="6"></td>
+                                <td colspan="1"><b> Total: </b></td>
+                                <td colspan="9"><b>{{total}}</b></td>
+                            </tr>
+                        </ng-template>
+
+
+                    </p-table>
+                </div>
+
+            </p-tabPanel>
+
+        </p-tabView>
+    </div>
+
+</div>
+
+
+
+
+
+
+<p-dialog header="Title" [(visible)]="display">
+    Content
+    <p-table [value]="[{}]">
+        <ng-template pTemplate="header" let-columns>
+
+            <tr>
+                <th *ngFor="let carPartsInfo of partsDescriber">{{ carPartsInfo}}</th>
+            </tr>
+
+        </ng-template>
+
+        <ng-template pTemplate="body">
+            <tr>
+                <td><input type="text" maxlength="3" oninput="this.value = this.value.toUpperCase()" pInputText
+                        [(ngModel)]="Name.MFR" /> </td>
+                <td><input type="text" pInputText maxlength="5" oninput="this.value = this.value.toUpperCase()"
+                        [(ngModel)]="Name.PARTNUMBER" /> </td>
+                <td><input type="text" pInputText [(ngModel)]="Name.DESCRIPTION" /> </td>
+                <td><input type="number" pInputText [(ngModel)]="Name.COST" /> </td>
+                <td><input type="text" pInputText [(ngModel)]="Name.ORDER" disabled="true" value='0' /> </td>
+                <td colspan="1"></td>
+                <td>
+                    <p-button *ngIf="!editPopup" label="ADD" (click)="addingFormDetailsByAddBtn()"></p-button>
+                    <p-button *ngIf="editPopup" label="UPDATE" (click)="addingFormDetailsByAddBtn()"></p-button>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="5"><label>ADD NOTE <input class="input-field-addnote" type="text" pInputText /> </label>
+                </td>
+
+                <td>
+                    <p-button label="cancel" (click)=" closingAddingDetailsPopUp()" class="p-button-cancel"></p-button>
+                </td>
+            </tr>
+
+        </ng-template>
+
+
+    </p-table>
+</p-dialog>
+<p-dialog header="ADD GROUP" [(visible)]="displayAddGroup">
+    <div>
+        <label>Group Name <input type="text" minlength="1" pInputText placeholder="Enter Group Name" required
+                [(ngModel)]="addGroups"></label><br><br>
+        <p-button (click)="addingGroupCancelBtn()" class="pop-button-cancel">CANCEL</p-button>
+        <p-button (click)="addingGroupToTab(addGroups)" class="pop-button-save"
+            [disabled]="addGroups == '' ? true: false">SAVE</p-button>
+    </div>
+
+</p-dialog>
+
+
+
+
+<form>
+    <p-dialog header="PARTS DETAILS " [(visible)]="partsinfo">
+        <p>MFR:{{selectedRecord.MFR}}
+            <br>
+            PARTNUMBER: {{selectedRecord.PARTNUMBER}}
+            <br>
+            COST:{{selectedRecord.COST | currency}}
+            <br>
+            AVAILIABILITY:{{selectedRecord.AVAILIABILITY}}
+            <br>
+            DETAILS:given part is in the store
+        </p>
+
+
+    </p-dialog>
+</form>

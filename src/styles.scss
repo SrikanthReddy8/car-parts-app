@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+
+.p-button-cancel {
+    .p-button {
+        background-color: orange !important;
+         margin-left: 220px;
+    }
+}
+.button-modifes{
+    .p-button{
+        background-color: white;
+        color:black;
+        border:none;
+        font-size: small;
+        padding: 4px;
+    
+    }
+}
+.input-field-addnote{
+    width:100% !important;
+    .p-inputText{
+        .p-component{
+            width:100%;
+        }
+        
+    }
+}
+.pop-button-cancel{
+    .p-button{
+        background-color: dimgrey;
+        color: white;
+        margin:2px;
+    }  
+}
+   .pop-button-save {
+       .p-button{
+        background-color: orangered;
+        color: white;
+        margin:2px;
+       }
+   } 
+   .p-menu{
+       
+           position: absolute;
+           top: auto !important;
+           .p-menu-overlay{
+               background-color: blue;
+           }
+
+   }
+   .back-to-home-btn{
+    .p-button{
+        background-color: red;
+    font: size 15px;
+    position: absolute;
+    right: 100px;
+    padding: 2px 30px;
+    }
+
+}
+.input-fields-content {
+    width: 30px;
+    margin: auto 5px;
+    text-align: center;
+}

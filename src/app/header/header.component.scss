@@ -1,0 +1,76 @@
+.header-section {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 0.5px;
+    margin: 0;
+    font-family: sans-serif;
+    position: relative;
+}
+.side-nav{
+    
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    i{
+        border: 1px solid white;
+        border-radius: 50%;
+        padding:4px
+    }
+}
+.cart-bar{
+    top: 44px;
+    position: absolute;
+    right: 25px;
+    i{
+        border: 1px solid white;
+        border-radius: 50%;
+        padding:4px
+    }
+}
+.side-nav-content{
+    position: absolute;
+    width: 18%;
+    text-align: center;
+    height: 100%;
+    margin-top: 2px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    button {
+        background: none;
+    color: white;
+    border: none;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    }
+    i{
+        border: 2px solid white;
+        border-radius: 50%;
+        padding:4px
+    }
+    
+}
+.lang-settings-ul{
+    margin-left: 40px;
+}
+
+.lang-list-item {
+    text-align: left;
+}
+.addedItemsCounter{
+    background: red;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    top: 16px;
+    right: 25px;
+}

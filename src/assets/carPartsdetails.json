@@ -1,0 +1,291 @@
+[
+    {
+       "MFR":"CNI",
+       "PARTNUMBER":"CNI 100.2",
+       "DESCRIPTION":"chevrolet chevelle malibu",
+       "COST":20,
+       "ORDER":0,
+       "AVAILIABILITY":"in store #1"
+    },
+    {
+      "MFR":"AKE",
+       "PARTNUMBER":"AKE ASP821A",
+       "DESCRIPTION":"buick skylark 320",
+       "COST":18,
+       "ORDER":0,
+       "AVAILIABILITY":"in store #1"
+    },
+    {
+      "MFR":"WAG",
+      "PARTNUMBER":"WAG BD 18009",
+      "DESCRIPTION":"plymouth satellite",
+      "COST":25,
+      "ORDER":0,
+      "AVAILIABILITY":"in store #1"
+      
+    },
+    {
+      "MFR":"GAT",
+      "PARTNUMBER":"GAT KO9870",
+      "DESCRIPTION":"amc rebel sst",
+      "COST":8,
+      "ORDER":0,
+      "AVAILIABILITY":["in store #12"]
+      
+    },
+    {
+      "MFR":"CNI",
+      "PARTNUMBER":"CNI1",
+      "DESCRIPTION":"ford torino",
+      "COST":18,
+      "ORDER":0,
+      "AVAILIABILITY":"in store #1"
+    },
+    {
+      "MFR":"AUT",
+      "PARTNUMBER":"AUT 0981",
+      "DESCRIPTION":"ford galaxie 500",
+      "COST":55,
+      "ORDER":0,
+      "AVAILIABILITY":"in store #1"
+    },
+    {
+      "MFR":"CMC",
+      "PARTNUMBER":"CMC XP56B1",
+      "DESCRIPTION":"chevrolet impala",
+      "COST":66,
+      "ORDER":0,
+      "AVAILIABILITY":"in store #1"
+    },
+    {
+      "MFR":"CNI",
+      "PARTNUMBER":"CNI 100.2",
+      "DESCRIPTION":"chevrolet chevelle malibu",
+      "COST":20,
+      "ORDER":0,
+      "AVAILIABILITY":"in store #1"
+   },
+   {
+     "MFR":"AKE",
+      "PARTNUMBER":"AKE ASP821A",
+      "DESCRIPTION":"buick skylark 320",
+      "COST":18,
+      "ORDER":0,
+      "AVAILIABILITY":"in store #1"
+   },
+   {
+     "MFR":"WAG",
+     "PARTNUMBER":"WAG BD 18009",
+     "DESCRIPTION":"plymouth satellite",
+     "COST":25,
+     "ORDER":0,
+     "AVAILIABILITY":"in store #1"
+     
+   },
+   {
+     "MFR":"GAT",
+     "PARTNUMBER":"GAT KO9870",
+     "DESCRIPTION":"amc rebel sst",
+     "COST":8,
+     "ORDER":0,
+     "AVAILIABILITY":"in store #1"
+     
+   },
+   {
+     "MFR":"CNI",
+     "PARTNUMBER":"CNI1",
+     "DESCRIPTION":"ford torino",
+     "COST":18,
+     "ORDER":0,
+     "AVAILIABILITY":"in store #1"
+   },
+   {
+     "MFR":"AUT",
+     "PARTNUMBER":"AUT 0981",
+     "DESCRIPTION":"ford galaxie 500",
+     "COST":55,
+     "ORDER":0,
+     "AVAILIABILITY":"in store #1"
+   },
+   {
+     "MFR":"CMC",
+     "PARTNUMBER":"CMC XP56B1",
+     "DESCRIPTION":"chevrolet impala",
+     "COST":66,
+     "ORDER":0,
+     "AVAILIABILITY":"in store #1"
+   }, {
+    "MFR":"CNI",
+    "PARTNUMBER":"CNI 100.2",
+    "DESCRIPTION":"chevrolet chevelle malibu",
+    "COST":20,
+    "ORDER":0,
+    "AVAILIABILITY":"in store #1"
+ },
+ {
+   "MFR":"AKE",
+    "PARTNUMBER":"AKE ASP821A",
+    "DESCRIPTION":"buick skylark 320",
+    "COST":18,
+    "ORDER":0,
+    "AVAILIABILITY":"in store #1"
+ },
+ {
+   "MFR":"WAG",
+   "PARTNUMBER":"WAG BD 18009",
+   "DESCRIPTION":"plymouth satellite",
+   "COST":25,
+   "ORDER":0,
+   "AVAILIABILITY":"in store #1"
+   
+ },
+ {
+   "MFR":"GAT",
+   "PARTNUMBER":"GAT KO9870",
+   "DESCRIPTION":"amc rebel sst",
+   "COST":8,
+   "ORDER":0,
+   "AVAILIABILITY":"in store #1"
+   
+ },
+ {
+   "MFR":"CNI",
+   "PARTNUMBER":"CNI1",
+   "DESCRIPTION":"ford torino",
+   "COST":18,
+   "ORDER":0,
+   "AVAILIABILITY":"in store #1"
+ },
+ {
+   "MFR":"AUT",
+   "PARTNUMBER":"AUT 0981",
+   "DESCRIPTION":"ford galaxie 500",
+   "COST":55,
+   "ORDER":0,
+   "AVAILIABILITY":"in store #1"
+ },
+ {
+   "MFR":"CMC",
+   "PARTNUMBER":"CMC XP56B1",
+   "DESCRIPTION":"chevrolet impala",
+   "COST":66,
+   "ORDER":0,
+   "AVAILIABILITY":"in store #1"
+ },
+ {
+  "MFR":"CNI",
+  "PARTNUMBER":"CNI 100.2",
+  "DESCRIPTION":"chevrolet chevelle malibu",
+  "COST":20,
+  "ORDER":0,
+  "AVAILIABILITY":"in store #1"
+},
+{
+ "MFR":"AKE",
+  "PARTNUMBER":"AKE ASP821A",
+  "DESCRIPTION":"buick skylark 320",
+  "COST":18,
+  "ORDER":0,
+  "AVAILIABILITY":"in store #1"
+},
+{
+ "MFR":"WAG",
+ "PARTNUMBER":"WAG BD 18009",
+ "DESCRIPTION":"plymouth satellite",
+ "COST":25,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+ 
+},
+{
+ "MFR":"GAT",
+ "PARTNUMBER":"GAT KO9870",
+ "DESCRIPTION":"amc rebel sst",
+ "COST":8,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+ 
+},
+{
+ "MFR":"CNI",
+ "PARTNUMBER":"CNI1",
+ "DESCRIPTION":"ford torino",
+ "COST":18,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+},
+{
+ "MFR":"AUT",
+ "PARTNUMBER":"AUT 0981",
+ "DESCRIPTION":"ford galaxie 500",
+ "COST":55,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+},
+{
+ "MFR":"CMC",
+ "PARTNUMBER":"CMC XP56B1",
+ "DESCRIPTION":"chevrolet impala",
+ "COST":66,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+}, {
+  "MFR":"CNI",
+  "PARTNUMBER":"CNI 100.2",
+  "DESCRIPTION":"chevrolet chevelle malibu",
+  "COST":20,
+  "ORDER":0,
+  "AVAILIABILITY":"in store #1"
+},
+{
+ "MFR":"AKE",
+  "PARTNUMBER":"AKE ASP821A",
+  "DESCRIPTION":"buick skylark 320",
+  "COST":18,
+  "ORDER":0,
+  "AVAILIABILITY":"in store #1"
+},
+{
+ "MFR":"WAG",
+ "PARTNUMBER":"WAG BD 18009",
+ "DESCRIPTION":"plymouth satellite",
+ "COST":25,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+ 
+},
+{
+ "MFR":"GAT",
+ "PARTNUMBER":"GAT KO9870",
+ "DESCRIPTION":"amc rebel sst",
+ "COST":8,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+ 
+},
+{
+ "MFR":"CNI",
+ "PARTNUMBER":"CNI1",
+ "DESCRIPTION":"ford torino",
+ "COST":18,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+},
+{
+ "MFR":"AUT",
+ "PARTNUMBER":"AUT 0981",
+ "DESCRIPTION":"ford galaxie 500",
+ "COST":55,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+},
+{
+ "MFR":"CMC",
+ "PARTNUMBER":"CMC XP56B1",
+ "DESCRIPTION":"chevrolet impala",
+ "COST":66,
+ "ORDER":0,
+ "AVAILIABILITY":"in store #1"
+}
+    
+]

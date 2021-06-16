@@ -1,0 +1,37 @@
+<div class="login-center">
+  <div class="input-fields">
+    <form [formGroup]="profileForm">
+      
+        <input type="text" placeholder="{{'login-inputs.username' | translate}}" formControlName="Username"><br>
+
+      
+      
+        <input type="password" placeholder="{{'login-inputs.password' | translate}}" formControlName="password" ><br>
+
+      
+
+
+      <div style="position:relative">
+        <span class="select-field-icon"><i class="fas fa-globe"></i></span>
+        
+          <select (change)="changeLang($event)">
+            <option>{{'login-inputs.select-Languages' | translate}} </option>
+            <option value="en">English</option>
+            <option value="fa">France</option>
+            
+          </select>
+
+        
+
+      </div>
+    </form>
+
+
+    <button class="button-field" (click)=" onSignBtnClick()" [disabled]="!profileForm.valid">
+      <i class="fas fa-lock-open"></i>{{'login-inputs.signin-button' | translate}}</button>
+
+  </div>
+</div>
+<div>
+  <h2>{{ 'HOME.HELLO' | translate }}</h2>
+</div>

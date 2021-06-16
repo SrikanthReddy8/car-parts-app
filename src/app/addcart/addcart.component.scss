@@ -1,0 +1,44 @@
+.form-content {
+    border: 2px solid black;
+    margin-top: 2px;
+    padding: 20px;
+    position: relative;
+    select{
+        width: 322px;
+        padding: 12px;
+        margin-left: 5px;
+    }
+    input {
+        width: 20em;
+    margin-left: 22px;
+    }
+    
+    
+    textarea{
+        width: 325px;
+        padding: 25px;
+        margin-left: 12px;
+    }
+    
+}
+.internal-note {
+    position: absolute;
+    top: 20px;
+    left: 48em;
+    span{
+        position: relative;
+    top: -185px;
+    }
+    textarea{
+        width: 45em;
+    height: 209px;
+    }
+}
+.addcart-delete-btn{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    float: right;
+    margin: 15px;
+    font-size: medium;
+}
