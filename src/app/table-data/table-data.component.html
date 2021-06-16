@@ -1,0 +1,43 @@
+<p-table [value]="tableData" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10]"
+                        [totalRecords]="totalRecords" pageLinkSize="3">
+                        <ng-template pTemplate="header">
+
+                            <tr>
+                                <th *ngFor="let header of columnHeaders">{{ header}}</th>
+                            </tr>
+
+                        </ng-template>
+                        <ng-template pTemplate="body" let-tableData>
+
+                            <tr>
+
+                                <td>{{tableData.MFR}}</td>
+                                <td style="cursor: pointer" (click)="partsInfo(tableData)">
+                                    {{tableData.PARTNUMBER}}</td>
+                                <td>{{tableData.DESCRIPTION}}</td>
+                                <td>{{tableData.COST | currency}}</td>
+                                <td>
+                                    <i (click)="increment(tableData)" class="fa fa-plus" aria-hidden="true"></i>
+                                    <input class="input-fields-content" [(ngModel)]="tableData.ORDER">
+                                    <i (click)="decrement(tableData)" class="fa fa-minus" aria-hidden="true"></i>
+                                </td>
+                                <td>
+                                    <select (change)="selectedoptions(tableData,$event)">
+                                        <option *ngFor="let item of availabilityArr">
+                                            {{item}}
+                                        </option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <i style="cursor: pointer;position:relative"
+                                        (click)="onActionIconClick($event,tableData)" class="fa fa-ellipsis-v"
+                                        aria-hidden="true">
+                                    </i>
+                                    <p-menu #menu [popup]="true" [model]="actionItems"></p-menu>
+                                </td>
+
+                            </tr>
+
+
+                        </ng-template>
+                    </p-table>

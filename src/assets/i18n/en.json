@@ -23,6 +23,24 @@
     "car-parts":
     {
         "addgroup":"Add Group",
-        "addpart":"Add Part"
+        "addpart":"Add Part",
+        "total":"Total"
+    },
+    "add-cart":
+    {
+        "caption":"please add some elements to cart",
+        "delete":"Delete",
+        "poNumber":"Po Number",
+        "orderNumber":"Order Number",
+        "note":"Note To Store",
+        "IntNote":"Internal Note",
+        "regular":"Regular",
+        "normal":"Normal"
+    },
+    "confir-order":
+    {
+      "orPlaced":"Orders Placed",
+      "orTotal":"ORDER TOTAL",
+      "back":"BACK TO HOME"  
     }
 }

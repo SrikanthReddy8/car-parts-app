@@ -36,6 +36,7 @@ import { CarPartsGarageComponent } from './car-parts-garage/car-parts-garage.com
 import { RegularService} from './Services/regularService';
 import { AddcartComponent } from './addcart/addcart.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { TableDataComponent } from './table-data/table-data.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -50,6 +51,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     CarPartsGarageComponent,
     AddcartComponent,
     ConfirmationComponent,
+    TableDataComponent,
     
     
     

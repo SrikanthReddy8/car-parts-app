@@ -23,6 +23,24 @@
     "car-parts":
     {
         "addgroup":"Ajouter un groupe",
-        "addpart":"Ajouter une pièce"
+        "addpart":"Ajouter une pièce",
+        "total":"Le total"
+    },
+    "add-cart":
+    {
+        "caption":"s'il vous plaît ajouter quelques éléments au panier",
+        "delete":"effacer",
+        "poNumber":"Numéro de bon de commande",
+        "orderNumber":"Numéro de commande",
+        "note":"Remarque à stocker",
+        "IntNote":"Remarque interne",
+        "regular":"Ordinaire",
+        "normal":"Ordinaire"
+    },
+    "confir-order":
+    {
+        "orPlaced":"Commandes passées",
+      "orTotal":"TOTAL DE LA COMMANDE",
+      "back":"DE RETOUR À LA MAISON"  
     }
 }

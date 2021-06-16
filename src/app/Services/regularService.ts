@@ -8,6 +8,7 @@ import { Subject } from 'rxjs';
 export class RegularService {
     public usersLoggedIn = new Subject<any>();
     public addedCartItemCount = new Subject<any>();
+    columnHeaders: any = ['MFR', 'PART NUMBER', 'DESCRIPTION', 'COST', 'ORDER', 'AVAILIABILITY'];
 
 
     constructor(private http: HttpClient) { }

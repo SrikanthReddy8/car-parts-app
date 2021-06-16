@@ -1,5 +1,5 @@
 <!-- <p>confirmation works!</p> -->
-<h2 style="color: #495057;margin-left: 16px;">Orders Placed</h2>
+<h2 style="color: #495057;margin-left: 16px;">{{'confir-order.orPlaced' | translate}} </h2>
 
 <p-table [value]="confimationCart">
     <ng-template pTemplate="header" let-columns>
@@ -39,5 +39,5 @@
         </tr>
     </ng-template>
 </p-table>
-<p class="total-content"><b>ORDER TOTAL </b><b>{{total | currency}}</b></p>
-<p-button class="back-to-home-btn" (click)="backToHomePage()">BACK TO HOME</p-button>
+<p class="total-content"><b>{{'confir-order.orTotal' | translate}} </b><b>{{total | currency}}</b></p>
+<p-button class="back-to-home-btn" (click)="backToHomePage()">{{'confir-order.back' | translate}}</p-button>

@@ -2,29 +2,29 @@
 
     <form>
         <label>
-            <span>PO Number:</span>
+            <span>{{'add-cart.poNumber' | translate}}:</span>
             <input type="text" pInputText />
 
         </label>
         <br><br>
         <label>
-            <span>Order Number:</span>
+            <span>{{'add-cart.orderNumber' | translate}}:</span>
             <select>
-                <option>Regular</option>
-                <option>Normal</option>
+                <option>{{'add-cart.regular' | translate}}</option>
+                <option>{{'add-cart.normal' | translate}}</option>
             </select>
 
         </label>
         <br><br>
         <label>
-            <span style="position: relative;top: -68px;">Note to Store:</span>
+            <span style="position: relative;top: -68px;">{{'add-cart.note' | translate}}:</span>
             <textarea pInputTextarea></textarea>
 
         </label>
 
         <div class="internal-note">
             <label>
-                <span>Internal Note:</span>
+                <span>{{'add-cart.IntNote' | translate}}:</span>
                 <textarea pInputTextarea></textarea>
 
             </label>
@@ -89,12 +89,12 @@
 </div>
 <div *ngIf="checkedPassMessage">
     <h1>
-        please add some elements to cart
+        {{'add-cart.caption' | translate}}
     </h1>
 </div>
 <p-button class="addcart-delete-btn" (click)="deletingItems()">
     <i class="far fa-trash-alt"></i>
-    DELETE
+    {{'add-cart.delete' | translate}}
 </p-button>
 
 

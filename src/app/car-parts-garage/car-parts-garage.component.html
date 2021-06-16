@@ -2,7 +2,7 @@
     <div class="button-fields-content">
 
         <p-button class="button-modifes" (click)="showDialogAddGroupopUp()">
-            <i class="fas fa-plus-circle"></i> 
+            <i class="fas fa-plus-circle"></i>
             {{ 'car-parts.addgroup' | translate }}
         </p-button>
 
@@ -13,14 +13,15 @@
 
     </div>
     <div>
-        <p-tabView  [(activeIndex)]="activeTabIndex">
-           
+        <p-tabView [(activeIndex)]="activeTabIndex">
 
 
-            <p-tabPanel [header]="tabs" *ngFor="let tabs of tabViewArray"  >
+
+            <p-tabPanel [header]="tabs" *ngFor="let tabs of tabViewArray">
 
                 <div>
-                    <p-table [value]="carMaterialInfo" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10]"
+                    <app-table-data [tableData]="carMaterialInfo" (editPopUpShowing)="editOrAddPopUp($event)" ></app-table-data>
+                    <!-- <p-table [value]="carMaterialInfo" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10]"
                         [totalRecords]="totalRecords" pageLinkSize="3">
                         <ng-template pTemplate="header" let-columns>
 
@@ -61,12 +62,12 @@
 
 
                         </ng-template>
-                    </p-table>
+                    </p-table> -->
                     <p-table [value]="[{}]">
                         <ng-template pTemplate="body">
                             <tr>
                                 <td colspan="6"></td>
-                                <td colspan="1"><b> Total: </b></td>
+                                <td colspan="1"><b> {{ 'car-parts.total' | translate }}: </b></td>
                                 <td colspan="9"><b>{{total}}</b></td>
                             </tr>
                         </ng-template>
@@ -93,7 +94,7 @@
         <ng-template pTemplate="header" let-columns>
 
             <tr>
-                <th *ngFor="let carPartsInfo of partsDescriber">{{ carPartsInfo}}</th>
+                <th *ngFor="let carPartsInfo of columnHeaders">{{ carPartsInfo}}</th>
             </tr>
 
         </ng-template>
@@ -128,6 +129,7 @@
 
     </p-table>
 </p-dialog>
+
 <p-dialog header="ADD GROUP" [(visible)]="displayAddGroup">
     <div>
         <label>Group Name <input type="text" minlength="1" pInputText placeholder="Enter Group Name" required
@@ -158,3 +160,20 @@
 
     </p-dialog>
 </form>
+
+<!-- <p-tabView [(activeIndex)]="activeTabIndex">
+    <p-tabPanel header="My Times">
+
+        <p-dataTable [value]="userTimeData">
+            <p-column field="project" header="project"> </p-column>
+            <p-column field="category" header="Category"> </p-column>
+            <p-column field="startTime" header="Start Time"> </p-column>
+            <p-column field="endTime" header="End Time"> </p-column>
+
+        </p-dataTable>
+
+        
+
+    </p-tabPanel>
+
+</p-tabView> -->
