@@ -13,14 +13,14 @@
 
     </div>
     <div>
-        <p-tabView [(activeIndex)]="activeTabIndex">
+        <p-tabView (onChange)="handleChange($event)" [(activeIndex)]="activeTabIndex">
 
 
 
-            <p-tabPanel [header]="tabs" *ngFor="let tabs of tabViewArray">
+            <p-tabPanel [header]="tabs.title" *ngFor="let tabs of tabViewArray">
 
                 <div>
-                    <app-table-data [tableData]="carMaterialInfo" (editPopUpShowing)="editOrAddPopUp($event)" ></app-table-data>
+                    <app-table-data [tableData]="tabs.data" (editPopUpShowing)="editOrAddPopUp($event)" ></app-table-data>
                      
                 </div>
 

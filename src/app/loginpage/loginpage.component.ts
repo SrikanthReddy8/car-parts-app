@@ -14,50 +14,48 @@ export class LoginpageComponent implements OnInit {
   Username: any;
   lang:any;
 
+  //reactive forms used .........
   profileForm = this.fb.group({
     Username: ['', Validators.required],
     password: ['', Validators.required]
   });
 
-  constructor(private router: Router, private regularservice: RegularService, private fb: FormBuilder,private translateService:TranslateService) 
+  constructor(
+    private router: Router,
+     private regularservice: RegularService, 
+     private fb: FormBuilder,
+    private translateService:TranslateService
+    ) 
   {
+    //added languages are in json..ok....
     translateService.addLangs(['en', 'fa']);
     translateService.setDefaultLang('en');
    }
 
-
+//here mainly reflecting username and making icons visible after navigation.....
   onSignBtnClick() {
-
     this.Username = this.profileForm.controls.Username.value;
     sessionStorage.setItem('loggedUser', this.Username);
     localStorage.setItem('userLoggedinBooleanValue', 'true');
     this.regularservice.updateLoggedInBoolean(true);
     this.router.navigate(['/CarPartsGarage']);
-   // this.translateService.use(this.lang);
+   
   }
 
 
 
   ngOnInit(): void {
+    //setting boolean value to hide icons in the header component..
     this.regularservice.updateLoggedInBoolean(false);
-    //this.lang = sessionStorage.getItem('lang') || 'en';-
+    
   }
 
+  //onchanging everytime passing event to this.......... 
   changeLang(selectedLangfromOption:any){
-    console.log(selectedLangfromOption.target.value);
+   //getting value of selected lang....
     let selectedLang:any = selectedLangfromOption.target.value;
     sessionStorage.setItem('lang',selectedLang);
-   // this.lang = selectedLang;
     this.translateService.use(selectedLang);
-
-  }
-
-
-  updateProfile() {
-    this.profileForm.patchValue({
-      Username: '',
-      password: '',
-    });
   }
 
 }

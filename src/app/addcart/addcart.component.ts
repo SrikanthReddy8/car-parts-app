@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { RegularService } from '../Services/regularService';
 
 @Component({
   selector: 'app-addcart',
@@ -14,6 +15,7 @@ export class AddcartComponent implements OnInit {
   checksCheckBox: boolean = false;
   checkedPassMessage:boolean = false;
   checksCartItem:boolean = true;
+  hideDeleteBtn:boolean = true;
   checksCheckBoxAll: any;
   partsDescriber: any = ['MFR', 'PART NUMBER', 'DESCRIPTION', 'COST', 'ORDER', 'AVAILIABILITY'];
 
@@ -27,7 +29,7 @@ export class AddcartComponent implements OnInit {
 
 
   
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private fb: FormBuilder, private router: Router,private regularservice:RegularService) { }
 
 
   ngOnInit(): void {
@@ -44,24 +46,27 @@ export class AddcartComponent implements OnInit {
   {
    
     this.selectedCartItems = this.cart.filter((item: any) => item.checked === true);
-
-    for(let i= 0;i <=this.selectedCartItems.length;i++)
-    {
-      const index = this.cart.indexOf(this.selectedCartItems[i]);
-      
-      if (index > -1)
-      {
-        this.cart.splice(index, 1);
+    let i=0;
+   while(i!==this.selectedCartItems.length)
+   {
+      let index = this.cart.findIndex((item) => item.id === this.selectedCartItems[i].id);
+      if (index > -1 ) 
+      { 
+        this.cart.splice(index,1); 
       }
-    } 
-    
-    //sessionStorage.setItem('cartitems',cart);
-    
+      this.selectedCartItems.splice(i,1);
+   }
+   this.showAddToCart();
+   //updating to session store  to refresh the data....
+   let cart:any = JSON.stringify(this.cart);
+   sessionStorage.setItem('cartItems',cart);
+   this.regularservice.updatingCartItemCount(this.cart.length);
   }
 
   showAddToCart(){
     if (this.cart.length == 0){
       this.checkedPassMessage = true;
+      this.hideDeleteBtn=false;
     }
   }
 
@@ -71,6 +76,7 @@ export class AddcartComponent implements OnInit {
     {
       let confirmedCartItems:any = this.cart.filter((item: any) => item.checked === true);
       sessionStorage.setItem('cart',JSON.stringify(confirmedCartItems));
+      
       this.router.navigate(['/confirmation']);
     }
     else

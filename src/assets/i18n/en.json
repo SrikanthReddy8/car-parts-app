@@ -28,7 +28,7 @@
     },
     "add-cart":
     {
-        "caption":"please add some elements to cart",
+        "caption":"please add some items to cart",
         "delete":"Delete",
         "poNumber":"Po Number",
         "orderNumber":"Order Number",

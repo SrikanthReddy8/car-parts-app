@@ -91,12 +91,12 @@
     <p-button (click)="confirmationPage()">PLACE ORDER</p-button>
 
 </div>
-<div *ngIf="checkedPassMessage">
+<div *ngIf="checkedPassMessage" >
     <h1>
         {{'add-cart.caption' | translate}}
     </h1>
 </div>
-<p-button class="addcart-delete-btn" (click)="deletingItems()">
+<p-button *ngIf="hideDeleteBtn" class="addcart-delete-btn" (click)="deletingItems()">
     <i class="far fa-trash-alt"></i>
     {{'add-cart.delete' | translate}}
 </p-button>
