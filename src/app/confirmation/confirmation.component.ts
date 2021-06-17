@@ -19,7 +19,7 @@ export class ConfirmationComponent implements OnInit {
 
   ngOnInit(): void {
     this.confimationCart = [];
-    this.addedItems=sessionStorage.getItem('cartItems')
+    this.addedItems=sessionStorage.getItem('cart') || [];
     this.confimationCart=JSON.parse(this.addedItems);
     console.log(this.confimationCart);
     this.totalOfCost();

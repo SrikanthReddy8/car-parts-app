@@ -1,4 +1,4 @@
-import { Component, Input, OnInit,ViewChild,EventEmitter,Output } from '@angular/core';
+import { Component, Input, OnInit,ViewChild,EventEmitter,Output, SimpleChange } from '@angular/core';
 import { RegularService } from 'src/app/Services/regularService';
 import { MenuItem } from 'primeng/api';
 
@@ -51,6 +51,11 @@ export class TableDataComponent implements OnInit {
   
 
   ngOnInit(): void {
+    // this.totalOfCost();
+  }
+
+  ngOnChanges() {
+    this.totalOfCost();
   }
 
   increment(selectedRecord: any) {

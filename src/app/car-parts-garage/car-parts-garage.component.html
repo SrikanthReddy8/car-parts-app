@@ -21,59 +21,7 @@
 
                 <div>
                     <app-table-data [tableData]="carMaterialInfo" (editPopUpShowing)="editOrAddPopUp($event)" ></app-table-data>
-                    <!-- <p-table [value]="carMaterialInfo" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10]"
-                        [totalRecords]="totalRecords" pageLinkSize="3">
-                        <ng-template pTemplate="header" let-columns>
-
-                            <tr>
-                                <th *ngFor="let carPartsInfo of partsDescriber">{{ carPartsInfo}}</th>
-                            </tr>
-
-                        </ng-template>
-                        <ng-template pTemplate="body" let-carMaterialInfo>
-
-                            <tr>
-
-                                <td>{{carMaterialInfo.MFR}}</td>
-                                <td style="cursor: pointer" (click)="partsInfo(carMaterialInfo)">
-                                    {{carMaterialInfo.PARTNUMBER}}</td>
-                                <td>{{carMaterialInfo.DESCRIPTION}}</td>
-                                <td>{{carMaterialInfo.COST | currency}}</td>
-                                <td>
-                                    <i (click)="increment(carMaterialInfo)" class="fa fa-plus" aria-hidden="true"></i>
-                                    <input class="input-fields-content" [(ngModel)]="carMaterialInfo.ORDER">
-                                    <i (click)="decrement(carMaterialInfo)" class="fa fa-minus" aria-hidden="true"></i>
-                                </td>
-                                <td>
-                                    <select (change)="selectedoptions(carMaterialInfo,$event)">
-                                        <option *ngFor="let item of availabilityArr">
-                                            {{item}}
-                                        </option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <i style="cursor: pointer;position:relative"
-                                        (click)="onActionIconClick($event,carMaterialInfo)" class="fa fa-ellipsis-v"
-                                        aria-hidden="true"></i>
-                                    <p-menu #menu [popup]="true" [model]="items"></p-menu>
-                                </td>
-
-                            </tr>
-
-
-                        </ng-template>
-                    </p-table> -->
-                    <p-table [value]="[{}]">
-                        <ng-template pTemplate="body">
-                            <tr>
-                                <td colspan="6"></td>
-                                <td colspan="1"><b> {{ 'car-parts.total' | translate }}: </b></td>
-                                <td colspan="9"><b>{{total}}</b></td>
-                            </tr>
-                        </ng-template>
-
-
-                    </p-table>
+                     
                 </div>
 
             </p-tabPanel>
@@ -89,7 +37,7 @@
 
 
 <p-dialog header="Title" [(visible)]="display">
-    Content
+    
     <p-table [value]="[{}]">
         <ng-template pTemplate="header" let-columns>
 

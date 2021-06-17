@@ -22,6 +22,8 @@ export class AddcartComponent implements OnInit {
   selectedCartItems: any[];
 
   CheckingItemsArray:string[];
+  selectItemsBeforeConfir:boolean=false;
+  msgs:any = [];
 
 
   
@@ -53,6 +55,8 @@ export class AddcartComponent implements OnInit {
       }
     } 
     
+    //sessionStorage.setItem('cartitems',cart);
+    
   }
 
   showAddToCart(){
@@ -62,8 +66,27 @@ export class AddcartComponent implements OnInit {
   }
 
   confirmationPage() {
-    this.router.navigate(['/confirmation']);
+    let someChecked:any = this.cart.some((item)=>item.checked===true);
+    if(someChecked==true)
+    {
+      let confirmedCartItems:any = this.cart.filter((item: any) => item.checked === true);
+      sessionStorage.setItem('cart',JSON.stringify(confirmedCartItems));
+      this.router.navigate(['/confirmation']);
+    }
+    else
+    {
+    console.log (someChecked);
+    this.show();
+    }
   }
+  show() {
+    this.msgs.push({severity:'info', summary:'please Select items', detail:'before place order'});
+    }
+
+    hide() {
+    this.msgs = [];
+      }
+
 
   isAllCheckBoxChecked(){
     return this.cart.every(p=>p.checked);

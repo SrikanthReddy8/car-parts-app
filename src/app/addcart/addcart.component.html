@@ -1,3 +1,7 @@
+<div>
+    <p-messages *ngIf='msgs.length > 0' [(value)]="msgs"></p-messages>
+</div>
+
 <div class="form-content">
 
     <form>
@@ -96,5 +100,7 @@
     <i class="far fa-trash-alt"></i>
     {{'add-cart.delete' | translate}}
 </p-button>
+
+
 
 
